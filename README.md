@@ -24,7 +24,7 @@ exten => _*51.,n,hangup()
 > authenticate(yourPasskeyHere)
 
 2. reload asterisk dialplan
-```
+```bash script
 asterisk -r
 reload
 exit
@@ -47,7 +47,7 @@ exten => _*52./401,n,chanspy(sip/${EXTEN:3},bEd)
 exten => _*52./401,n,hangup()
 ```
 2. reload asterisk dialplan
-```
+```bash script
 asterisk -r
 reload
 exit
@@ -72,7 +72,7 @@ exten => _*53./_40[1-5],n,chanspy(sip/${EXTEN:3},bEd)
 exten => _*53./_40[1-5],n,hangup()
 ```
 2. reload asterisk dialplan
-```
+```bash script
 asterisk -r
 reload
 exit
@@ -96,7 +96,7 @@ exten => *54/402,n,chanspy(sip/401,bEW)
 exten => *54/402,n,hangup()
 ```
 2. reload asterisk dialplan
-```
+```bash script
 asterisk -r
 reload
 exit
