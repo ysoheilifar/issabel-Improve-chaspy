@@ -80,4 +80,24 @@ exit
 ### Version 4
 Secretary can whisper to boss
 > extension of boss is : 401 
+
 > extension of secretary is : 402
+
+1. open /etc/asterisk/extensions_custom.conf create zarbinnetwork context and include it
+```
+[from-internal-custom]
+include => zarbinnetwork
+
+[zarbinnetwork]
+;*************v4*************
+exten => *54/402,1,noop(start chanspy v4)
+exten => *54/402,n,answer()
+exten => *54/402,n,chanspy(sip/401,bEW)
+exten => *54/402,n,hangup()
+```
+2. reload asterisk dialplan
+```
+asterisk -r
+reload
+exit
+```
