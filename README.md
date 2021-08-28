@@ -14,11 +14,11 @@ include => zarbinnetwork
 [zarbinnetwork]
 ;*************v1*************
 exten => _*51.,1,noop(start chanspy v1)
-exten => _*51.,n,authenticate(220)
+exten => _*51.,n,authenticate(PutyourPasskeyHere)
 exten => _*51.,n,answer()
 exten => _*51.,n,verbose(****sip/${EXTEN:3}****)
 exten => _*51.,n,chanspy(sip/${EXTEN:3},bEd)
 exten => _*51.,n,hangup()
 ```
-- passkey define on 
+- passkey define on (put only number) 
 > authenticate(yourPasskeyHere)
