@@ -22,3 +22,10 @@ exten => _*51.,n,hangup()
 ```
 - passkey define on (put only number) 
 > authenticate(yourPasskeyHere)
+
+2. reload asterisk dialplan
+```
+asterisk -r
+reload
+exit
+```
