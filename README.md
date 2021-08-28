@@ -29,3 +29,26 @@ asterisk -r
 reload
 exit
 ```
+### Version 2
+supervisor can spy and whisper to anybodey
+> extension of supervisor is : 401
+
+1. open /etc/asterisk/extensions_custom.conf create zarbinnetwork context and include it
+```
+[from-internal-custom]
+include => zarbinnetwork
+
+[zarbinnetwork]
+;*************v2*************
+exten => _*52./401,1,noop(start chanspy v2)
+exten => _*52./401,n,answer()
+exten => _*52./401,n,verbose(****sip/${EXTEN:3}****)
+exten => _*52./401,n,chanspy(sip/${EXTEN:3},bEd)
+exten => _*52./401,n,hangup()
+```
+2. reload asterisk dialplan
+```
+asterisk -r
+reload
+exit
+```
