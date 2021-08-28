@@ -4,7 +4,7 @@ issabel improve chaspy application for more feature
 I write 4 version of chanspy for 4 situation
 
 ### Version 1
-Everyone who has the passkey can spy and whisper to anybody
+Everyone who has the **Passkey** can spy and whisper to anybody
 
 1. open /etc/asterisk/extensions_custom.conf create zarbinnetwork context and include it
 ```
@@ -20,4 +20,5 @@ exten => _*51.,n,verbose(****sip/${EXTEN:3}****)
 exten => _*51.,n,chanspy(sip/${EXTEN:3},bEd)
 exten => _*51.,n,hangup()
 ```
-- passkey define on 'authenticate(yourpasskeyHere)'
+- passkey define on 
+> authenticate(yourPasskeyHere)
