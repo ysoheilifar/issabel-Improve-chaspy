@@ -19,3 +19,5 @@ exten => _*51.,n,answer()
 exten => _*51.,n,verbose(****sip/${EXTEN:3}****)
 exten => _*51.,n,chanspy(sip/${EXTEN:3},bEd)
 exten => _*51.,n,hangup()
+```
+- passkey define on 'authenticate(yourpasskeyHere)'
