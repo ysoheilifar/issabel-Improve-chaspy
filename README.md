@@ -30,7 +30,7 @@ reload
 exit
 ```
 ### Version 2
-supervisor can spy and whisper to anybodey
+Supervisor can spy and whisper to anybodey
 > extension of supervisor is : 401
 
 1. open /etc/asterisk/extensions_custom.conf create zarbinnetwork context and include it
